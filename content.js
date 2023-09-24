@@ -25,43 +25,6 @@ function theFunction2() {
     var b = document.createElement("div");
     b.id = "boxForfilters";
     var c = document.createElement("style");
-    c.innerText = `.swiper {
-        position: relative;
-     }
-      .swiper:before {
-        content: '';
-        position: relative;
-        width: 34px;
-        height: 14px;
-        display: block;
-        background-color: #e7ebed;
-        border-radius: 10px;
-     }
-      .swiper:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -2px;
-        transform: translate(0, -3px);
-        height: 20px;
-        width: 20px;
-        display: block;
-        border-radius: 50%;
-        background-color: #cfd8dc;
-        transition: 0.2s all;
-     }
-      .swiper:focus {
-        outline: none;
-     }
-      .swiper:checked:before {
-        background-color: #80c8f4;
-     }
-      .swiper:checked:after {
-        left: 100%;
-        transform: translate(calc(2px - 100%), -2px);
-        background-color: #0091ea;
-     }
-      .check-input{accent-color:#077398} #boxForfilters{display: grid;grid-template-columns: 210px 210px 1fr;} #ratePickerSpan{max-width: 170px;} @media only screen and (max-width: 670px) {#boxForfilters{grid-template-columns: 1fr 1fr;} #ratePickerSpan{grid-column: 1/2;} #switches, #switches2{grid-column: 2/3 } } @media only screen and (max-width: 450px) {#ratePickerSpan{max-width: 130px;} #boxForfilters{grid-template-columns: 130px 1fr;}}`;
     a.appendChild(c);
     c = document.createElement("div");
     c.id = "hideSettingsButtonContainer";
@@ -371,14 +334,14 @@ function theFunction2() {
     b.innerHTML =
       '<div class="form-check"><input type="checkbox" class="check-input swiper" ' +
       c +
-      ' id="highlightedOnTopBox" title="Places all highlighted loads at the top of the list"><div style="display: inline-flex;">&nbsp;&nbsp;Highlighted at the top</div></div>                                                                                                                                                                                                                                                                        <div class="form-check"><input type="checkbox" class="check-input swiper" id="ncb" style="margin-right: 0.5rem;" title="Allows to book loads with only one click"><div style="display: inline-flex;">Click-to-book</div></div>';
+      ' id="highlightedOnTopBox" title="Places all highlighted loads at the top of the list"><div style="display: inline-flex;">&nbsp;&nbsp;Show at the top</div></div>                                                                                                                                                                                                                                                                        <div class="form-check"><input type="checkbox" class="check-input swiper" id="ncb" style="margin-right: 0.5rem;" title="Allows to book loads with only one click"><div style="display: inline-flex;">Easy book</div></div>';
     c = document.createElement("span");
     c.id = "switches2";
     c.style = "max-width: 200px;";
     c.innerHTML =
       ' <div class="form-check" ><input type="checkbox" id="refRateRange" class="check-input swiper" style="margin-right: 0.5rem;" title="Refresh Rate Range"><div style="display: inline-flex; ">Refresh Range</div></div>  <div class="form-check" ><input type="checkbox" id="autoExpand" class="check-input swiper" ' +
       (V ? "checked " : " ") +
-      ' style="margin-right: 0.5rem;" title="Automatically expands (shows detailed information about) the first highlighted load"><div style="display: inline-flex; ">Auto Expand</div></div>';
+      ' style="margin-right: 0.5rem;" title="Automatically expands (shows detailed information about) the first highlighted load"><div style="display: inline-flex; ">Show details</div></div>';
     a.appendChild(b);
     a.appendChild(c);
     document.getElementById("ncb").addEventListener("click", Aa);

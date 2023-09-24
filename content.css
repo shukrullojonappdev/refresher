@@ -1,0 +1,76 @@
+.swiper {
+  position: relative;
+}
+.swiper:before {
+  content: "";
+  position: relative;
+  width: 34px;
+  height: 14px;
+  display: block;
+  background-color: #e7ebed;
+  border-radius: 10px;
+}
+.swiper:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -2px;
+  transform: translate(0, -3px);
+  height: 20px;
+  width: 20px;
+  display: block;
+  border-radius: 50%;
+  background-color: #cfd8dc;
+  transition: 0.2s all;
+}
+.swiper:focus {
+  outline: none;
+}
+.swiper:checked:before {
+  background-color: rgb(43, 154, 190);
+}
+.swiper:checked:after {
+  left: 100%;
+  transform: translate(calc(2px - 100%), -2px);
+  background-color: rgb(7, 115, 152);
+}
+
+.swiper {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+/*  
+.check-input {
+  accent-color: #077398;
+}
+*/
+#boxForfilters {
+  display: grid;
+  grid-template-columns: 210px 210px 1fr;
+}
+#ratePickerSpan {
+  max-width: 170px;
+}
+@media only screen and (max-width: 670px) {
+  #boxForfilters {
+    grid-template-columns: 1fr 1fr;
+  }
+  #ratePickerSpan {
+    grid-column: 1/2;
+  }
+  #switches,
+  #switches2 {
+    grid-column: 2/3;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #ratePickerSpan {
+    max-width: 130px;
+  }
+  #boxForfilters {
+    grid-template-columns: 130px 1fr;
+  }
+}

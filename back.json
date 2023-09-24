@@ -25,14 +25,9 @@
   "sandbox": {
     "pages": ["background/background.html"]
   },
-  "description": "Reinvent the Amazon Relay load board with Relay Auto-Refresher",
-  "icons": {
-    "128": "assets/icon128.png",
-    "16": "assets/icon16.png",
-    "48": "assets/icon48.png"
-  },
+  "description": "Amazon Relay Refresher by shukrullojondev",
   "manifest_version": 3,
-  "name": "Relay Auto-Refresher",
+  "name": "Amazon Relay Refresher",
   "permissions": ["tabs", "storage", "webRequest", "declarativeNetRequest"],
   "host_permissions": [
     "https://relay.amazon.com/api/loadboard/search",
@@ -40,7 +35,6 @@
     "https://relay.amazon.co.uk/api/loadboard/search"
   ],
   "short_name": "Relay Auto-Refresher",
-  "update_url": "https://clients2.google.com/service/update2/crx",
   "version": "1.7.0",
   "web_accessible_resources": [
     {
