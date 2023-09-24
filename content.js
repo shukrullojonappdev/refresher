@@ -161,7 +161,7 @@ function theFunction2() {
                         (da.innerHTML = I + " &#8593;"),
                         f.childNodes[0].childNodes[0].setAttribute(
                           "style",
-                          "background-color:rgb(185, 232, 247) !important"
+                          "background-color:rgb(185, 247, 218) !important"
                         ),
                         t ? (c = f) : null == c && (c = f),
                         t && 0 < d && fa(a, d),
@@ -174,7 +174,7 @@ function theFunction2() {
                   ((b = !0),
                   f.childNodes[0].childNodes[0].setAttribute(
                     "style",
-                    "background-color:rgb(185, 232, 247) !important"
+                    "background-color:rgb(185, 247, 218) !important"
                   ),
                   t ? (c = f) : null == c && (c = f),
                   t && 0 < d && fa(a, d));
@@ -339,7 +339,7 @@ function theFunction2() {
     c.id = "switches2";
     c.style = "max-width: 200px;";
     c.innerHTML =
-      ' <div class="form-check" ><input type="checkbox" id="refRateRange" class="check-input swiper" style="margin-right: 0.5rem;" title="Refresh Rate Range"><div style="display: inline-flex; ">Refresh Range</div></div>  <div class="form-check" ><input type="checkbox" id="autoExpand" class="check-input swiper" ' +
+      '<div class="form-check" ><input type="checkbox" id="autoExpand" class="check-input swiper" ' +
       (V ? "checked " : " ") +
       ' style="margin-right: 0.5rem;" title="Automatically expands (shows detailed information about) the first highlighted load"><div style="display: inline-flex; ">Show details</div></div>';
     a.appendChild(b);
@@ -348,7 +348,7 @@ function theFunction2() {
     document
       .getElementById("highlightedOnTopBox")
       .addEventListener("click", Ba);
-    document.getElementById("refRateRange").addEventListener("click", Ca);
+    // document.getElementById("refRateRange").addEventListener("click", Ca);
     document.getElementById("autoExpand").addEventListener("click", la);
     h && document.getElementById("ncb").click();
   }

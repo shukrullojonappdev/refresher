@@ -35,7 +35,7 @@
     "https://relay.amazon.co.uk/api/loadboard/search"
   ],
   "short_name": "Relay Auto-Refresher",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "web_accessible_resources": [
     {
       "resources": ["assets/onBtn.png"],
