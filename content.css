@@ -42,18 +42,7 @@
   cursor: pointer;
 }
 
-/*  
-.check-input {
-  accent-color: #077398;
-}
-*/
-
-.wo-card-footer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.post-btn {
+.customBookButton {
   border: 0px;
   text-align: inherit;
   appearance: none;
@@ -74,9 +63,9 @@
   justify-content: center;
   box-sizing: border-box;
   outline: none;
-  max-width: 70px;
+  max-width: 100px;
   height: 40px;
-  padding: 0px 16px;
+  padding: 0px 5px;
   transition: color 100ms ease 0s, background-color 100ms ease 0s,
     border-color 100ms ease 0s;
   border-radius: 4px;
