@@ -22,6 +22,10 @@
     "extension_pages": "script-src 'self'; object-src 'self';",
     "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
   },
+
+  "sandbox": {
+    "pages": ["sandbox.html"]
+  },
   "description": "Amazon Relay Refresher by shukrullojondev",
   "manifest_version": 3,
   "name": "Amazon Relay Refresher",
@@ -33,6 +37,11 @@
   ],
   "short_name": "Relay Auto-Refresher",
   "version": "2.10.3",
+  "icons": {
+    "16": "assets/16x16.png",
+    "48": "assets/48x48.png",
+    "128": "assets/128dx128.png"
+  },
   "web_accessible_resources": [
     {
       "resources": ["assets/onBtn.png"],
