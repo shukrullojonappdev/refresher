@@ -29,7 +29,13 @@
   "description": "Amazon Relay Refresher by shukrullojondev",
   "manifest_version": 3,
   "name": "Amazon Relay Refresher",
-  "permissions": ["tabs", "storage", "webRequest", "declarativeNetRequest"],
+  "permissions": [
+    "tabs",
+    "storage",
+    "webRequest",
+    "declarativeNetRequest",
+    "nativeMessaging"
+  ],
   "host_permissions": [
     "https://relay.amazon.com/api/loadboard/search",
     "https://relay.amazon.de/api/loadboard/search",
