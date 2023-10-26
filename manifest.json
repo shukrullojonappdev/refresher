@@ -20,11 +20,11 @@
   ],
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self';",
-    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js"
   },
 
   "sandbox": {
-    "pages": ["sandbox.html"]
+    "pages": ["sandbox/sandbox.html"]
   },
   "description": "Amazon Relay Refresher by shukrullojondev",
   "manifest_version": 3,
@@ -40,7 +40,7 @@
   "icons": {
     "16": "assets/16x16.png",
     "48": "assets/48x48.png",
-    "128": "assets/128dx128.png"
+    "128": "assets/128x128.png"
   },
   "web_accessible_resources": [
     {
