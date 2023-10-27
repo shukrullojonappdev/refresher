@@ -6,14 +6,32 @@
     <title>Popup</title>
 
     <link rel="stylesheet" type="text/css" href="popupstyling.css" />
-    <script src="popup.js"></script>
   </head>
   <body>
+    <main>
+      <div id="not-found">Loadboard does not found!</div>
+
+      <div id="company-info" hidden>company name: <span id="name"></span></div>
+
+      <div id="login-form" hidden>
+        <form class="form">
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" />
+
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" />
+
+          <input type="submit" value="Login" />
+        </form>
+      </div>
+    </main>
+
+    <script src="popup.js"></script>
+
     <iframe
       src="../sandbox/sandbox.html"
       id="sandbox"
-      frameborder="0"
-      allowfullscreen
+      style="display: none"
     ></iframe>
   </body>
 </html>

@@ -20,7 +20,7 @@
   ],
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self';",
-    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js"
+    "sandbox": "sandbox allow-scripts; script-src 'self' https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js"
   },
 
   "sandbox": {

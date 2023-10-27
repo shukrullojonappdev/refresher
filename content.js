@@ -635,15 +635,7 @@ function run3(w) {
     AB = !1;
   w && setTimeout(T, 200);
   setTimeout(() => {
-    chrome.runtime.onMessage.addListener((message) => {
-      console.log(message);
-      if (
-        message.name.toLowerCase() ===
-        document.getElementById("company-name").innerText.toLowerCase()
-      ) {
-        U || (t("relayAutoRefresher"), (U = !0), T());
-      }
-    });
+    U || (t("relayAutoRefresher"), (U = !0), T());
   }, 500);
   document.body.addEventListener("mouseup", function () {
     1 == E
@@ -1295,15 +1287,7 @@ function run2(w) {
     X = !0;
   w && setTimeout(T, 200);
   setTimeout(() => {
-    chrome.runtime.onMessage.addListener((message) => {
-      console.log(message);
-      if (
-        message.name.toLowerCase() ===
-        document.getElementById("company-name").innerText.toLowerCase()
-      ) {
-        C || (t("relayAutoRefresher"), (C = !0), T());
-      }
-    });
+    C || (t("relayAutoRefresher"), (C = !0), T());
   }, 500);
   document.body.addEventListener("mouseup", function () {
     1 == f
@@ -1908,25 +1892,17 @@ function run1() {
     X = !1,
     c = !0;
   setTimeout(() => {
-    chrome.runtime.onMessage.addListener((message) => {
-      console.log(message);
-      if (
-        message.name.toLowerCase() ===
-        document.getElementById("company-name").innerText.toLowerCase()
-      ) {
-        C ||
-          (F(),
-          (C = !0),
-          (h = document.getElementsByClassName("css-1gp38wa").item(0)),
-          null == h &&
-            ((h = document.getElementsByClassName("css-ppc4rt").item(0)),
-            null == h &&
-              ((h = document.getElementsByClassName("css-174gqfj").item(0)),
-              null == h && console.log("ERROR: 412"))),
-          Ba(),
-          document.getElementById("onBtn").addEventListener("click", la));
-      }
-    });
+    C ||
+      (F(),
+      (C = !0),
+      (h = document.getElementsByClassName("css-1gp38wa").item(0)),
+      null == h &&
+        ((h = document.getElementsByClassName("css-ppc4rt").item(0)),
+        null == h &&
+          ((h = document.getElementsByClassName("css-174gqfj").item(0)),
+          null == h && console.log("ERROR: 412"))),
+      Ba(),
+      document.getElementById("onBtn").addEventListener("click", la));
   }, 500);
   document.body.addEventListener("mouseup", function () {
     1 == y
@@ -1985,6 +1961,14 @@ function mainFunction() {
     }
   else run1();
 }
-setTimeout(function () {
-  mainFunction();
-}, 100);
+
+chrome.runtime.onMessage.addListener((message) => {
+  if (
+    message?.name.toLowerCase() ===
+    document.getElementById("company-name").innerText.toLowerCase()
+  ) {
+    setTimeout(function () {
+      mainFunction();
+    }, 100);
+  }
+});
