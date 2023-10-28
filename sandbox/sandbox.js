@@ -4,6 +4,7 @@ import {
   signInWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
 import {
+  doc,
   getDoc,
   getFirestore,
 } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js";
@@ -22,27 +23,21 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth();
 
-window.addEventListener("message", async (e) => {
-  window.parent.postMessage({ name: "Five Star Express LLC" }, "*");
+window.addEventListener("message", (e) => {
+  const { email, password } = e.data;
 
-  // await signInWithEmailAndPassword(auth, email, password)
-  //   .then(async (userCredential) => {
-  //     const user = userCredential.user;
-  //     hideFormRow();
-  //     console.log(user);
-  //     const docRef = doc(db, "companies", user.uid);
-  //     const docSnap = await getDoc(docRef);
-  //     console.log(docSnap);
-  //     if (docSnap.exists()) {
-  //       window.parent.postMessage(docSnap.data(), "*");
-  //       console.log("Document data:", docSnap.data());
-  //     } else {
-  //       console.log("No such document!");
-  //     }
-  //   })
-  //   .catch((error) => {
-  //     const errorCode = error.code;
-  //     const errorMessage = error.message;
-  //     console.log(errorCode + ": " + errorMessage);
-  //   });
+  signInWithEmailAndPassword(auth, email, password)
+    .then(async (userCredential) => {
+      const user = userCredential.user;
+      const docRef = doc(db, "companies", user.uid);
+      const docSnap = await getDoc(docRef);
+      if (docSnap.exists()) {
+        window.parent.postMessage(docSnap.data(), "*");
+      } else {
+        console.log("No such document!");
+      }
+    })
+    .catch((err) => {
+      window.parent.postMessage({ error: err.message }, "*");
+    });
 });

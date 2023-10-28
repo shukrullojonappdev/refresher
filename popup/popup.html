@@ -9,11 +9,20 @@
   </head>
   <body>
     <main>
-      <div id="not-found">Loadboard does not found!</div>
+      <div id="not-found">
+        <h1>Loadboard does not found!</h1>
+      </div>
 
-      <div id="company-info" hidden>company name: <span id="name"></span></div>
+      <div id="company-info" hidden>
+        company name:
+        <br /><span id="company-name"></span>
+        <div>
+          <button id="exit">exit</button>
+        </div>
+      </div>
 
       <div id="login-form" hidden>
+        <h1>Login for use extension</h1>
         <form class="form">
           <label for="email">Email</label>
           <input type="text" name="email" id="email" />
@@ -23,6 +32,7 @@
 
           <input type="submit" value="Login" />
         </form>
+        <div id="error"></div>
       </div>
     </main>
 

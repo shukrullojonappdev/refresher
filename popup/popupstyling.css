@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+
 *,
 *::after,
 *::before {
@@ -8,7 +10,8 @@
 
 body {
   width: 300px;
-  padding: 10px 0;
+  padding: 10px 20px;
+  font-family: "Play", sans-serif;
 }
 
 .form {
@@ -16,5 +19,61 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+}
+
+#login-form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#not-found h1 {
+  text-align: center;
+}
+
+#company-info {
+  font-size: 1.15rem;
+}
+
+#company-info button {
+  margin-top: 10px;
+  width: 100px;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: 8px 0;
+  background: #c25c5c;
+  color: white;
+}
+
+#company-info button:hover {
+  background: #bd3a3a;
+}
+
+#company-name {
+  margin-left: 20px;
+  color: #34c759;
+}
+
+.form label {
+  margin-bottom: 5px;
+}
+
+.form input:not(:last-child) {
+  padding: 5px 8px;
+  border-radius: 3px;
+  outline-color: #34c759;
+  outline-width: 1px;
+  border: 1px solid gray;
+  margin-bottom: 10px;
+}
+
+.form input:last-child {
+  font-weight: 700;
+  border: 0;
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: 8px 0;
+  background: #34c759;
+  color: white;
 }

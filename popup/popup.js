@@ -2,6 +2,7 @@
 const notFound = document.getElementById("not-found");
 const loginForm = document.getElementById("login-form");
 const companyInfo = document.getElementById("company-info");
+const companyName = document.getElementById("company-name");
 
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -25,20 +26,36 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     notFound.hidden = true;
     loginForm.hidden = false;
 
-    chrome.storage.session.get(["name"]).then((result) => {
+    document.getElementById("exit").addEventListener("click", () => {
+      chrome.storage.local.clear(() => {
+        companyInfo.hidden = true;
+        loginForm.hidden = false;
+      });
+    });
+
+    chrome.storage.local.get(["name"]).then((result) => {
       if ("name" in result) {
         loginForm.hidden = true;
         companyInfo.hidden = false;
+        companyName.innerText = result.name;
       }
     });
   }
 });
 
 window.addEventListener("message", (e) => {
-  chrome.storage.session.set(e.data);
-  chrome.runtime.sendMessage(e.data);
   if ("name" in e.data) {
+    chrome.storage.local.set(e.data);
+    chrome.runtime.sendMessage(e.data);
+
     loginForm.hidden = true;
     companyInfo.hidden = false;
+    companyName.innerText = e.data.name;
+
+    return;
+  }
+
+  if ("error" in e.data) {
+    document.getElementById("error").innerText = e.data.error;
   }
 });
