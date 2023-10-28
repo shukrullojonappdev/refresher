@@ -20,19 +20,34 @@
   ],
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self';",
-    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+    "sandbox": "sandbox allow-scripts; script-src 'self' https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js"
+  },
+
+  "sandbox": {
+    "pages": ["sandbox/sandbox.html"]
   },
   "description": "Amazon Relay Refresher by shukrullojondev",
   "manifest_version": 3,
   "name": "Amazon Relay Refresher",
-  "permissions": ["tabs", "storage", "webRequest", "declarativeNetRequest"],
+  "permissions": [
+    "tabs",
+    "storage",
+    "webRequest",
+    "declarativeNetRequest",
+    "nativeMessaging"
+  ],
   "host_permissions": [
     "https://relay.amazon.com/api/loadboard/search",
     "https://relay.amazon.de/api/loadboard/search",
     "https://relay.amazon.co.uk/api/loadboard/search"
   ],
   "short_name": "Relay Auto-Refresher",
-  "version": "2.10.3",
+  "version": "2.13.1",
+  "icons": {
+    "16": "assets/16x16.png",
+    "48": "assets/48x48.png",
+    "128": "assets/128x128.png"
+  },
   "web_accessible_resources": [
     {
       "resources": ["assets/onBtn.png"],

@@ -1961,6 +1961,14 @@ function mainFunction() {
     }
   else run1();
 }
-setTimeout(function () {
-  mainFunction();
-}, 100);
+
+chrome.runtime.onMessage.addListener((message) => {
+  if (
+    message?.name.toLowerCase() ===
+    document.getElementById("company-name").innerText.toLowerCase()
+  ) {
+    setTimeout(function () {
+      mainFunction();
+    }, 100);
+  }
+});

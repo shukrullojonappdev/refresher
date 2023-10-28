@@ -1,167 +1,79 @@
-body{
-    margin: 0px;
-    width: 100%;
-    font-family: 'PT Sans', sans-serif;
-/*    background-color: whitesmoke;*/
-    background-color: #fbfbfb;
-    font-size: 16px;
-    min-width: 400px;
-    max-width: 450px;
-    margin: 0 auto;
-}
-hr{
-    margin: 25px 0px;
-    border: none;
-    height: 1px;
-    color: #DDD; /* old IE */
-    background-color: #DDD; /* Modern Browsers */
-}
-header{
-    width: 100%;
-    background-color: #229ed1;
-    height: 4.8rem;
-    font-size: 1.2rem;
-    display: flex;
-    vertical-align: middle;
-    margin-bottom: 20px;
-    
-}
-h2{
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    width: 100%;
-}
-#content{
-    margin: 8px;
-}
-h4{
-    color: #345055;
-    margin: 12px;
-}
-#google_login_button{
-    width: 100%;
-    display: block;
-    border: none;
-    background: none;
-    text-align: center;
-}
-button:hover{
-    cursor: pointer;
+@import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@keyframes loader {
-  0% {
-    transform: translate(-50%,-50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%,-50%) rotate(360deg);
-  }
-}
-#signOut{
-    margin-left: 10px;
-    /* display: flex;
-    justify-content: center;
-    margin: 0 auto; */
-    background-color: #fbfbfb;
-    color: #222;
-    border: 1px #CCC solid;
-    padding: 5px 15px;
-    border-radius: 20px
-    
-    
-    
-}
-#subStatus{
-    margin-left: 10px;
-    color: white;
-    background-color: orangered; 
-    padding: 3px 10px;
-    border-radius: 2px;
-/*    #71d122;*/
-}
-#licenceId{
-    font-weight: 100;
-    font-size: 0.9rem;
-}
-#refreshBtn{
-    fill: #345055;
-}
-#refreshBtn:hover{
-    cursor: pointer;
-}
-.message{
-    margin: 20px 10px;
-    padding: 5px;
-/*    background-color: white;*/
-    border: 1px solid #DDD;
-    border-radius: 5px;
+body {
+  width: 300px;
+  padding: 10px 20px;
+  font-family: "Play", sans-serif;
 }
 
-.stripeBanner{
-    height: 100%; 
-    width: 100%;
-    object-fit: contain;
-}
-a{
-    color: cadetblue;
-}
-#activate{
-    background-color: #71d122;
-    border: none;
-    margin: 20px 10px;
-    display: flex;
-    justify-content: center;
-    color: white;
-    padding: 20px;
-    border-radius: 5px;
-    font-size: 1.5rem;    
-    font-weight: 700;
-    text-decoration: none;
-}
-#activate:hover{
-    cursor: pointer;
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-footer{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin: 20px 0px;
-    color: #CCC;
-    font-size: 0.8rem;
+#login-form h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-
-
-
-.headerLoading{
-    opacity: 0.5;
-}
-.contentLoading{
-    height: 200px;
-}
-#cancellation{
-    /* background-color: #ed9a9a;     */
-    border-radius:10px;
-    border: 2px solid #b85353;
-    margin: 25px 12px;
-    padding: 12px;
-    /* color: #b85353; */
-    color: #b85353;
-    font-weight: bold;
-    text-align: center;
+#not-found h1 {
+  text-align: center;
 }
 
-.content{
-    margin: 0px 12px;
+#company-info {
+  font-size: 1.15rem;
 }
-.content label{
-    color: #345055;
-    font-weight: 500;
+
+#company-info button {
+  margin-top: 10px;
+  width: 100px;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: 8px 0;
+  background: #c25c5c;
+  color: white;
 }
-.content #sectionHeader{
-    color: #345055;
-    font-weight: 700;
-    margin: 12px 0px;
+
+#company-info button:hover {
+  background: #bd3a3a;
+}
+
+#company-name {
+  margin-left: 20px;
+  color: #34c759;
+}
+
+.form label {
+  margin-bottom: 5px;
+}
+
+.form input:not(:last-child) {
+  padding: 5px 8px;
+  border-radius: 3px;
+  outline-color: #34c759;
+  outline-width: 1px;
+  border: 1px solid gray;
+  margin-bottom: 10px;
+}
+
+.form input:last-child {
+  font-weight: 700;
+  border: 0;
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: 8px 0;
+  background: #34c759;
+  color: white;
 }
