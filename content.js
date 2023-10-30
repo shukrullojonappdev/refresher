@@ -82,7 +82,6 @@ function run3(w) {
     F();
   }
   function oa() {
-    console.log("oa");
     setTimeout(function () {
       var d = document.getElementById("onBtn"),
         f = "assets/offBtn.png";
@@ -343,7 +342,7 @@ function run3(w) {
     f.innerHTML =
       '<div class="form-check"><input type="checkbox" class="swiper" ' +
       g +
-      ' id="highlightedOnTopBox" title="Show at the top"><div style="display: inline-flex;">&nbsp;&nbsp;Show at the top</div></div> <div class="form-check" ><input type="checkbox" id="easyBook" class="swiper" style="margin-right: 0.5rem;" title="Easy book"><div style="display: inline-flex; ">Easy book</div></div>';
+      ' id="highlightedOnTopBox" title="Show at the top"><div style="display: inline-flex;">Show at the top</div></div> <div class="form-check" ><input type="checkbox" id="easyBook" class="swiper" title="Easy book"><div style="display: inline-flex; ">Easy book</div></div>';
     g = document.createElement("span");
     g.id = "switches2";
     g.style = "max-width: 200px;";
@@ -492,6 +491,7 @@ function run3(w) {
           document.getElementById("onBtn").addEventListener("click", oa))
         : chrome.runtime.sendMessage({ type: "6ad1f6as5f1" }, function (d) {});
     }
+    addCustomComponents();
   }
   function t(d) {
     null != document.getElementById(d) &&
@@ -533,7 +533,7 @@ function run3(w) {
     t("lwrsldr");
     t("pprsldr");
     document.querySelector("#ratePickerSpan").innerHTML =
-      '<style>section{padding-top:5px;}section.range-sliders input {position: absolute !important; margin: 0 !important;width: 100% !important;max-width: 170px !important;}section.range-sliders input::-webkit-slider-thumb {pointer-events: all !important;position: relative !important;z-index: 1 !important;outline: 0 !important;}section.range-sliders input {-webkit-appearance: none;height: 7px;background: #FFF;border-radius: 10px;border: 1px solid #ccc;}#rrr{margin-top:19px;}input::-webkit-slider-thumb {-webkit-appearance: none;appearance: none;width: 15px;height: 15px;border-radius: 15px; background: #077398;cursor: pointer;}@media only screen and (max-width: 450px) {section.range-sliders input {max-width: 120px !important;} #rrr{max-width: 120px !important; font-size:0.9rem;}}</style>  <section class="range-sliders"><input id="rfrrtsldr" type="range" max="10" min="0.1" step="0.1" value="5" style = "width: 100%;"></input> </section><div><p id="rrr" align="center">Refresh Rate: 5X</p></div>';
+      '<style>section{padding-top:5px;}section.range-sliders input {position: absolute !important; margin: 0 !important;width: 100% !important;max-width: 170px !important;}section.range-sliders input::-webkit-slider-thumb {pointer-events: all !important;position: relative !important;z-index: 1 !important;outline: 0 !important;}section.range-sliders input {-webkit-appearance: none;height: 7px;background: #FFF;border-radius: 10px;border: 1px solid #ccc;}#rrr{margin-top:19px;}input::-webkit-slider-thumb {-webkit-appearance: none;appearance: none;width: 15px;height: 15px;border-radius: 15px; background: #077398;cursor: pointer;}@media only screen and (max-width: 450px) {section.range-sliders input {max-width: 120px !important;} #rrr{max-width: 120px !important; font-size:0.9rem;}}</style>  <section class="range-sliders"><input id="rfrrtsldr" type="range" max="10" min="0.1" step="0.1" value="5" style = "width: 100%;"></input> </section><div><p id="rrr" align="left">Refresh Rate: 5X</p></div>';
     na();
     document.getElementById("rfrrtsldr").addEventListener("input", ya);
   }
@@ -980,7 +980,7 @@ function run2(w) {
     a.innerHTML =
       '<div class="form-check"><input type="checkbox" class="swiper" ' +
       b +
-      ' id="highlightedOnTopBox" title="Show at the top"><div style="display: inline-flex;">&nbsp;&nbsp;Show at the top</div></div> <div class="form-check"><input type="checkbox" class="swiper" id="ncb" style="margin-right: 0.5rem;" title="Easy book"><div style="display: inline-flex;">Easy book</div></div>';
+      ' id="highlightedOnTopBox" title="Show at the top"><div style="display: inline-flex;">Show at the top</div></div> <div class="form-check"><input type="checkbox" class="swiper" id="ncb" title="Easy book"><div style="display: inline-flex;">Easy book</div></div>';
     b = document.createElement("span");
     b.id = "switches2";
     b.style = "max-width: 200px;";
@@ -1149,7 +1149,7 @@ function run2(w) {
     t("rfrrtsldr");
     -1 == l[1] && (l = [500, 200]);
     document.querySelector("#ratePickerSpan").innerHTML =
-      '<style>section{padding-top:5px;}section.range-sliders input {position: absolute !important; margin: 0 !important;width: 100% !important;max-width: 170px !important;}section.range-sliders input::-webkit-slider-thumb {pointer-events: all !important;position: relative !important;z-index: 1 !important;outline: 0 !important;}section.range-sliders input {-webkit-appearance: none;height: 7px;background: #FFF;border-radius: 10px;border: 1px solid #ccc;}#rrr{margin-top:19px;}input::-webkit-slider-thumb {-webkit-appearance: none;appearance: none;width: 15px;height: 15px;border-radius: 15px; background: #077398;cursor: pointer;}@media only screen and (max-width: 450px) {section.range-sliders input {max-width: 120px !important;} #rrr{max-width: 120px !important;font-size:0.9rem;}}</style>            <section class="range-sliders"><input id="lwrsldr" type="range" max="10" min="0.1" step="0.1" value="2.0"><input id="pprsldr" type="range" max="10" min="0.1" step="0.1" value="5.0"></section><div><p id="rrr" align="center">Range: 2X - 5X</p></div>';
+      '<style>section{padding-top:5px;}section.range-sliders input {position: absolute !important; margin: 0 !important;width: 100% !important;max-width: 170px !important;}section.range-sliders input::-webkit-slider-thumb {pointer-events: all !important;position: relative !important;z-index: 1 !important;outline: 0 !important;}section.range-sliders input {-webkit-appearance: none;height: 7px;background: #FFF;border-radius: 10px;border: 1px solid #ccc;}#rrr{margin-top:19px;}input::-webkit-slider-thumb {-webkit-appearance: none;appearance: none;width: 15px;height: 15px;border-radius: 15px; background: #077398;cursor: pointer;}@media only screen and (max-width: 450px) {section.range-sliders input {max-width: 120px !important;} #rrr{max-width: 120px !important;font-size:0.9rem;}}</style>            <section class="range-sliders"><input id="lwrsldr" type="range" max="10" min="0.1" step="0.1" value="2.0"><input id="pprsldr" type="range" max="10" min="0.1" step="0.1" value="5.0"></section><div><p id="rrr" align="left">Range: 2X - 5X</p></div>';
     ca();
     document.getElementById("lwrsldr").addEventListener("input", ja);
     document.getElementById("pprsldr").addEventListener("input", ja);
@@ -1159,7 +1159,7 @@ function run2(w) {
     t("lwrsldr");
     t("pprsldr");
     document.querySelector("#ratePickerSpan").innerHTML =
-      '<style>section{padding-top:5px;}section.range-sliders input {position: absolute !important; margin: 0 !important;width: 100% !important;max-width: 170px !important;}section.range-sliders input::-webkit-slider-thumb {pointer-events: all !important;position: relative !important;z-index: 1 !important;outline: 0 !important;}section.range-sliders input {-webkit-appearance: none;height: 7px;background: #FFF;border-radius: 10px;border: 1px solid #ccc;}#rrr{margin-top:19px;}input::-webkit-slider-thumb {-webkit-appearance: none;appearance: none;width: 15px;height: 15px;border-radius: 15px; background: #077398;cursor: pointer;}@media only screen and (max-width: 450px) {section.range-sliders input {max-width: 120px !important;} #rrr{max-width: 120px !important; font-size:0.9rem;}}</style>  <section class="range-sliders"><input id="rfrrtsldr" type="range" max="10" min="0.1" step="0.1" value="5" style = "width: 100%;"></input> </section><div><p id="rrr" align="center">Refresh Rate: 5X</p></div>';
+      '<style>section{padding-top:5px;}section.range-sliders input {position: absolute !important; margin: 0 !important;width: 100% !important;max-width: 170px !important;}section.range-sliders input::-webkit-slider-thumb {pointer-events: all !important;position: relative !important;z-index: 1 !important;outline: 0 !important;}section.range-sliders input {-webkit-appearance: none;height: 7px;background: #FFF;border-radius: 10px;border: 1px solid #ccc;}#rrr{margin-top:19px;}input::-webkit-slider-thumb {-webkit-appearance: none;appearance: none;width: 15px;height: 15px;border-radius: 15px; background: #077398;cursor: pointer;}@media only screen and (max-width: 450px) {section.range-sliders input {max-width: 120px !important;} #rrr{max-width: 120px !important; font-size:0.9rem;}}</style>  <section class="range-sliders"><input id="rfrrtsldr" type="range" max="10" min="0.1" step="0.1" value="5" style = "width: 100%;"></input> </section><div><p id="rrr" align="left">Refresh Rate: 5X</p></div>';
     ca();
     document.getElementById("rfrrtsldr").addEventListener("input", Da);
   }
@@ -1617,14 +1617,14 @@ function run1() {
     b.innerHTML =
       '<div class="form-check"><input type="checkbox" class="swiper" ' +
       e +
-      ' id="highlightedOnTopBox" title="Show at the top"><div style="display: inline-flex;">&nbsp;&nbsp;Show at the top</div></div>                                                                                                                                                                                                                                                                        <div class="form-check"><input type="checkbox" class="swiper" id="ncb" style="margin-right: 0.5rem;" title="Easy book"><div style="display: inline-flex;">Easy book</div></div>';
+      ' id="highlightedOnTopBox" title="Show at the top"><div style="display: inline-flex;">Show at the top</div></div>                                                                                                                                                                                                                                                                        <div class="form-check"><input type="checkbox" class="swiper" id="ncb" style="margin-right: 0.5rem;" title="Easy book"><div style="display: inline-flex;">Easy book</div></div>';
     e = document.createElement("span");
     e.id = "switches2";
     e.style = "max-width: 200px;";
     e.innerHTML =
       '<div class="form-check" ><input type="checkbox" id="autoExpand" class="swiper" ' +
       (X ? "checked " : " ") +
-      ' style="margin-right: 0.5rem;" title="Show details"><div style="display: inline-flex; ">Show details</div></div> <div class="form-check" ><input type="checkbox" id="autoBook" class="swiper" style="margin-right: 0.5rem;" title="Auto book"><div style="display: inline-flex; ">Auto book</div></div>';
+      ' style="margin-right: 0.5rem;" title="Show details"><div style="display: inline-flex; ">Show details</div></div>';
     a.appendChild(b);
     a.appendChild(e);
     document.getElementById("ncb").addEventListener("click", ya);
@@ -1756,7 +1756,7 @@ function run1() {
       ? (S("rfrrtsldr"),
         -1 == l[1] && ((l = [500, 200]), R()),
         (document.querySelector("#ratePickerSpan").innerHTML =
-          '<style>section{padding-top:5px;}section.range-sliders input {position: absolute !important; margin: 0 !important;width: 100% !important;max-width: 170px !important;}section.range-sliders input::-webkit-slider-thumb {pointer-events: all !important;position: relative !important;z-index: 1 !important;outline: 0 !important;}section.range-sliders input {-webkit-appearance: none;height: 7px;background: #FFF;border-radius: 10px;border: 1px solid #ccc;}#rrr{margin-top:19px;}input::-webkit-slider-thumb {-webkit-appearance: none;appearance: none;width: 15px;height: 15px;border-radius: 15px; background: #34688c;cursor: pointer;}@media only screen and (max-width: 450px) {section.range-sliders input {max-width: 120px !important;} #rrr{max-width: 120px !important;font-size:0.9rem;}}</style>            <section class="range-sliders"><input id="lwrsldr" type="range" max="10" min="0.1" step="0.1" value="2.0"><input id="pprsldr" type="range" max="10" min="0.1" step="0.1" value="5.0"></section><div><p id="rrr" align="center">Range: 2X - 5X</p></div>'),
+          '<style>section{padding-top:5px;}section.range-sliders input {position: absolute !important; margin: 0 !important;width: 100% !important;max-width: 170px !important;}section.range-sliders input::-webkit-slider-thumb {pointer-events: all !important;position: relative !important;z-index: 1 !important;outline: 0 !important;}section.range-sliders input {-webkit-appearance: none;height: 7px;background: #FFF;border-radius: 10px;border: 1px solid #ccc;}#rrr{margin-top:19px;}input::-webkit-slider-thumb {-webkit-appearance: none;appearance: none;width: 15px;height: 15px;border-radius: 15px; background: #34688c;cursor: pointer;}@media only screen and (max-width: 450px) {section.range-sliders input {max-width: 120px !important;} #rrr{max-width: 120px !important;font-size:0.9rem;}}</style>            <section class="range-sliders"><input id="lwrsldr" type="range" max="10" min="0.1" step="0.1" value="2.0"><input id="pprsldr" type="range" max="10" min="0.1" step="0.1" value="5.0"></section><div><p id="rrr" align="left">Range: 2X - 5X</p></div>'),
         ca(),
         document.getElementById("lwrsldr").addEventListener("input", ja),
         document.getElementById("pprsldr").addEventListener("input", ja))
@@ -1766,7 +1766,7 @@ function run1() {
     S("lwrsldr");
     S("pprsldr");
     document.querySelector("#ratePickerSpan").innerHTML =
-      '<style>section{padding-top:5px;}section.range-sliders input {position: absolute !important; margin: 0 !important;width: 100% !important;max-width: 170px !important;}section.range-sliders input::-webkit-slider-thumb {pointer-events: all !important;position: relative !important;z-index: 1 !important;outline: 0 !important;}section.range-sliders input {-webkit-appearance: none;height: 7px;background: #FFF;border-radius: 10px;border: 1px solid #ccc;}#rrr{margin-top:19px;}input::-webkit-slider-thumb {-webkit-appearance: none;appearance: none;width: 15px;height: 15px;border-radius: 15px; background: #34688c;cursor: pointer;}@media only screen and (max-width: 450px) {section.range-sliders input {max-width: 120px !important;} #rrr{max-width: 120px !important; font-size:0.9rem;}}</style>  <section class="range-sliders"><input id="rfrrtsldr" type="range" max="10" min="0.1" step="0.1" value="5" style = "width: 100%;"></input> </section><div><p id="rrr" align="center">Refresh Rate: 5X</p></div>';
+      '<style>section{padding-top:5px;}section.range-sliders input {position: absolute !important; margin: 0 !important;width: 100% !important;max-width: 170px !important;}section.range-sliders input::-webkit-slider-thumb {pointer-events: all !important;position: relative !important;z-index: 1 !important;outline: 0 !important;}section.range-sliders input {-webkit-appearance: none;height: 7px;background: #FFF;border-radius: 10px;border: 1px solid #ccc;}#rrr{margin-top:19px;}input::-webkit-slider-thumb {-webkit-appearance: none;appearance: none;width: 15px;height: 15px;border-radius: 15px; background: #34688c;cursor: pointer;}@media only screen and (max-width: 450px) {section.range-sliders input {max-width: 120px !important;} #rrr{max-width: 120px !important; font-size:0.9rem;}}</style>  <section class="range-sliders"><input id="rfrrtsldr" type="range" max="10" min="0.1" step="0.1" value="5" style = "width: 100%;"></input> </section><div><p id="rrr" align="left">Refresh Rate: 5X</p></div>';
     ca();
     document.getElementById("rfrrtsldr").addEventListener("input", Da);
   }
@@ -1963,12 +1963,122 @@ function mainFunction() {
 }
 
 chrome.runtime.onMessage.addListener((message) => {
+  console.log(message);
   if (
+    "name" in message &&
     message?.name.toLowerCase() ===
-    document.getElementById("company-name").innerText.toLowerCase()
+      document.getElementById("company-name").innerText.toLowerCase()
   ) {
     setTimeout(function () {
       mainFunction();
     }, 100);
   }
+
+  if ("exit" in message && document.getElementById("relayAutoRefresher")) {
+    document.getElementById("relayAutoRefresher").remove();
+    document.getElementsByClassName("css-hkinvy")[0].style.height = "auto";
+  }
 });
+
+function addCustomComponents() {
+  const refresher = document.getElementById("relayAutoRefresher");
+  const rangeBox = document.getElementById("ratePickerSpan");
+  if (document.getElementsByClassName("css-hkinvy")[0]) {
+    document.getElementsByClassName("css-hkinvy")[0].style.height = 0;
+  }
+
+  const clearFilter = document.createElement("span");
+  clearFilter.id = "customClearFilter";
+  clearFilter.innerHTML = `
+    <svg width="112" height="26" viewBox="0 0 112 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="112" height="26" rx="4" fill="#FFEAED"/>
+    <path d="M14.718 18.14C12.17 18.14 10.896 17.3187 10.896 15.676V11.364C10.896 9.628 12.17 8.76 14.718 8.76C15.586 8.76 16.4167 8.84867 17.21 9.026V10.034C16.314 9.81 15.4927 9.698 14.746 9.698C14.382 9.698 14.0647 9.72133 13.794 9.768C13.5233 9.80533 13.262 9.87533 13.01 9.978C12.4687 10.2113 12.198 10.6687 12.198 11.35V15.606C12.198 16.6513 13.066 17.174 14.802 17.174C15.5487 17.174 16.37 17.062 17.266 16.838V17.874C16.4727 18.0513 15.6233 18.14 14.718 18.14ZM18.9943 8.2H20.2543V18H18.9943V8.2ZM25.2957 18.14C23.2237 18.14 22.1877 17.4493 22.1877 16.068V13.394C22.1877 12.5727 22.421 11.9847 22.8877 11.63C23.3637 11.266 24.129 11.084 25.1837 11.084C26.1823 11.084 26.901 11.2567 27.3397 11.602C27.7877 11.9473 28.0117 12.5447 28.0117 13.394V14.892H23.4617V15.914C23.4617 16.3807 23.625 16.7167 23.9517 16.922C24.2783 17.1273 24.7823 17.23 25.4637 17.23C26.1077 17.23 26.8683 17.118 27.7457 16.894V17.86C26.887 18.0467 26.0703 18.14 25.2957 18.14ZM26.7517 14.066V13.002C26.7517 12.5913 26.6257 12.3113 26.3737 12.162C26.131 12.0033 25.711 11.924 25.1137 11.924C24.535 11.924 24.115 12.0033 23.8537 12.162C23.5923 12.3113 23.4617 12.5913 23.4617 13.002V14.066H26.7517ZM32.0178 18.14C31.3738 18.14 30.8745 18.0793 30.5198 17.958C30.1745 17.8367 29.9225 17.622 29.7638 17.314C29.6145 17.006 29.5398 16.5627 29.5398 15.984C29.5398 15.4707 29.6098 15.074 29.7498 14.794C29.8992 14.5047 30.1465 14.2993 30.4918 14.178C30.8465 14.0567 31.3458 13.996 31.9898 13.996H34.0198V12.918C34.0198 12.666 33.9685 12.4747 33.8658 12.344C33.7725 12.204 33.6092 12.106 33.3758 12.05C33.1518 11.994 32.8205 11.966 32.3818 11.966C31.6818 11.966 30.9072 12.022 30.0578 12.134V11.21C30.9818 11.126 31.8172 11.084 32.5638 11.084C33.3478 11.084 33.9265 11.1447 34.2998 11.266C34.6732 11.378 34.9298 11.5787 35.0698 11.868C35.2098 12.1573 35.2798 12.6053 35.2798 13.212V18H34.0618V17.356C33.9592 17.8787 33.2778 18.14 32.0178 18.14ZM32.2278 17.314C32.6852 17.314 33.0725 17.2813 33.3898 17.216C33.8098 17.132 34.0198 16.936 34.0198 16.628V14.78H32.0738C31.6725 14.78 31.3832 14.8127 31.2058 14.878C31.0285 14.934 30.9118 15.046 30.8558 15.214C30.7998 15.382 30.7718 15.6527 30.7718 16.026C30.7718 16.362 30.8045 16.6233 30.8698 16.81C30.9352 16.9873 31.0518 17.118 31.2198 17.202C31.3878 17.2767 31.6398 17.314 31.9758 17.314H32.2278ZM37.465 11.224H38.655V12.33C38.655 12.1153 38.7484 11.9147 38.935 11.728C39.1217 11.532 39.3597 11.378 39.649 11.266C39.9384 11.1447 40.223 11.084 40.503 11.084H41.119V12.162H40.419C39.8217 12.162 39.3877 12.2413 39.117 12.4C38.8557 12.5493 38.725 12.8247 38.725 13.226V18H37.465V11.224ZM46.2018 12.05H44.6478V11.224H46.2018V10.132C46.2018 9.35733 46.3698 8.82067 46.7058 8.522C47.0511 8.214 47.6298 8.06 48.4418 8.06C48.9458 8.06 49.4171 8.08333 49.8558 8.13V8.942C49.5011 8.89533 49.1838 8.872 48.9038 8.872C48.5025 8.872 48.1991 8.90467 47.9938 8.97C47.7978 9.03533 47.6578 9.152 47.5738 9.32C47.4991 9.47867 47.4618 9.72133 47.4618 10.048V11.224H49.8558V12.05H47.4618V18H46.2018V12.05ZM50.7798 8.2H52.0398V9.572H50.7798V8.2ZM50.7798 11.224H52.0398V18H50.7798V11.224ZM54.2268 8.2H55.4868V18H54.2268V8.2ZM60.5141 18.14C59.9354 18.14 59.4827 18.0793 59.1561 17.958C58.8294 17.8273 58.5914 17.6127 58.4421 17.314C58.3021 17.006 58.2321 16.5767 58.2321 16.026V12.05H56.7201V11.224H58.2321V9.124H59.5061V11.224H61.9281V12.05H59.5061V16.096C59.5061 16.432 59.5434 16.684 59.6181 16.852C59.7021 17.02 59.8421 17.1413 60.0381 17.216C60.2434 17.2813 60.5374 17.314 60.9201 17.314C61.0414 17.314 61.3774 17.2767 61.9281 17.202V18.028C61.4521 18.1027 60.9807 18.14 60.5141 18.14ZM66.1609 18.14C64.0889 18.14 63.0529 17.4493 63.0529 16.068V13.394C63.0529 12.5727 63.2862 11.9847 63.7529 11.63C64.2289 11.266 64.9942 11.084 66.0489 11.084C67.0476 11.084 67.7662 11.2567 68.2049 11.602C68.6529 11.9473 68.8769 12.5447 68.8769 13.394V14.892H64.3269V15.914C64.3269 16.3807 64.4902 16.7167 64.8169 16.922C65.1436 17.1273 65.6476 17.23 66.3289 17.23C66.9729 17.23 67.7336 17.118 68.6109 16.894V17.86C67.7522 18.0467 66.9356 18.14 66.1609 18.14ZM67.6169 14.066V13.002C67.6169 12.5913 67.4909 12.3113 67.2389 12.162C66.9962 12.0033 66.5762 11.924 65.9789 11.924C65.4002 11.924 64.9802 12.0033 64.7189 12.162C64.4576 12.3113 64.3269 12.5913 64.3269 13.002V14.066H67.6169ZM70.7971 11.224H71.9871V12.33C71.9871 12.1153 72.0804 11.9147 72.2671 11.728C72.4537 11.532 72.6917 11.378 72.9811 11.266C73.2704 11.1447 73.5551 11.084 73.8351 11.084H74.4511V12.162H73.7511C73.1537 12.162 72.7197 12.2413 72.4491 12.4C72.1877 12.5493 72.0571 12.8247 72.0571 13.226V18H70.7971V11.224ZM77.7773 18.14C77.0586 18.14 76.2839 18.084 75.4533 17.972V17.006C76.5453 17.1833 77.3293 17.272 77.8053 17.272C78.4026 17.272 78.8319 17.216 79.0933 17.104C79.3546 16.9827 79.4853 16.7633 79.4853 16.446V15.76C79.4853 15.4707 79.3873 15.2653 79.1913 15.144C78.9953 15.0227 78.6779 14.962 78.2393 14.962H77.4693C76.7693 14.962 76.2326 14.8173 75.8593 14.528C75.4953 14.2387 75.3133 13.8327 75.3133 13.31V12.68C75.3133 11.616 76.3213 11.084 78.3373 11.084C78.4866 11.084 79.1726 11.1213 80.3953 11.196V12.106C79.5646 11.9753 78.8599 11.91 78.2813 11.91C77.6186 11.91 77.1659 11.9753 76.9233 12.106C76.6806 12.2367 76.5593 12.456 76.5593 12.764V13.338C76.5593 13.7953 76.9746 14.024 77.8053 14.024H78.5893C80.0173 14.024 80.7313 14.556 80.7313 15.62V16.208C80.7313 16.908 80.4886 17.4073 80.0033 17.706C79.5179 17.9953 78.7759 18.14 77.7773 18.14Z" fill="#E13B54"/>
+    <g clip-path="url(#clip0_1_40)">
+    <path d="M88.8086 15.8071L92.1117 19.1102C92.7461 19.7446 93.7524 19.7446 94.3867 19.1102L97.5586 15.9383C98.0836 15.4133 98.3899 14.7133 98.3899 13.9477C98.3899 13.3571 98.2149 12.8102 97.8867 12.3508L101.102 9.13522C101.409 8.82897 101.584 8.43522 101.584 8.01959C101.584 7.58209 101.409 7.16647 101.102 6.86022C100.796 6.55397 100.38 6.40084 99.9649 6.40084C99.5492 6.40084 99.1336 6.55397 98.8274 6.86022L95.6117 10.0758C95.1305 9.72584 94.5617 9.55084 93.993 9.55084C93.2711 9.55084 92.5492 9.81334 92.0024 10.3602L88.8305 13.5321C88.5242 13.8383 88.3711 14.2321 88.3711 14.6696C88.3711 15.1071 88.5024 15.5008 88.8086 15.8071ZM99.5274 7.56022C99.768 7.31959 100.162 7.31959 100.402 7.56022C100.512 7.66959 100.577 7.84459 100.577 7.99772C100.577 8.15084 100.512 8.30397 100.402 8.43522L97.2305 11.6071L96.3555 10.7321L99.5274 7.56022ZM95.2617 11.0602L96.8586 12.6571C97.2086 13.0071 97.3836 13.4665 97.3836 13.9477C97.3836 14.429 97.1867 14.8883 96.8586 15.2383L96.3117 15.7852L92.1336 11.6071L92.6805 11.0602C93.4024 10.3602 94.5617 10.3602 95.2617 11.0602ZM89.5086 14.2321L91.4555 12.2852L95.6117 16.4633L93.6649 18.4102C93.4242 18.6508 93.0305 18.6508 92.7899 18.4102L89.4867 15.1071C89.3774 14.9977 89.3117 14.8446 89.3117 14.6696C89.3117 14.4946 89.3774 14.3633 89.5086 14.2321Z" fill="#E13B54"/>
+    <path d="M93.993 12.2852C94.1899 12.4821 94.4961 12.4821 94.693 12.2852C94.8899 12.0883 94.8899 11.7821 94.693 11.5852C94.6055 11.4977 94.4742 11.4321 94.343 11.4321C94.2117 11.4321 94.0805 11.4758 93.993 11.5852C93.7961 11.7602 93.7961 12.0883 93.993 12.2852Z" fill="#E13B54"/>
+    <path d="M95.6774 14.1883C95.8742 14.3852 96.1805 14.3852 96.3774 14.1883C96.5742 13.9915 96.5742 13.6852 96.3774 13.4883C96.2899 13.4008 96.1586 13.3352 96.0274 13.3352C95.8961 13.3352 95.7649 13.379 95.6774 13.4883C95.4805 13.6633 95.4805 13.9915 95.6774 14.1883Z" fill="#E13B54"/>
+    </g>
+    <defs>
+    <clipPath id="clip0_1_40">
+    <rect width="14" height="14" fill="white" transform="translate(88 6)"/>
+    </clipPath>
+    </defs>
+    </svg>
+  `;
+
+  if (refresher?.firstChild?.id === "myBox") {
+    document.getElementById("myBox").remove();
+    createMyDiv(refresher);
+  } else {
+    createMyDiv(refresher);
+  }
+
+  if (!document.getElementById("customClearFilter")) {
+    rangeBox?.appendChild(clearFilter);
+
+    document
+      .getElementById("customClearFilter")
+      ?.addEventListener("click", () => {
+        document
+          .getElementsByClassName("css-1qoar0o")
+          [document.getElementsByClassName("css-1qoar0o").length - 1].click();
+      });
+  }
+}
+
+function createMyDiv(refresher) {
+  const myBox = document.createElement("div");
+  myBox.id = "myBox";
+  myBox.innerHTML = `
+    <span id="customGoToTop">
+      <svg width="102" height="28" viewBox="0 0 102 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="102" height="28" rx="3" fill="#E9F7FF"/>
+      <path d="M15.082 19.14C14.6527 19.14 14.27 19.1213 13.934 19.084C13.6073 19.0467 13.262 18.9767 12.898 18.874C12.4873 18.762 12.142 18.622 11.862 18.454C11.582 18.2767 11.3533 18.0387 11.176 17.74C10.9893 17.4227 10.896 17.068 10.896 16.676V12.378C10.896 11.8553 11.0313 11.4073 11.302 11.034C11.5727 10.6607 11.946 10.39 12.422 10.222C12.8793 10.0633 13.3133 9.95133 13.724 9.886C14.144 9.81133 14.5967 9.774 15.082 9.774C16.2393 9.774 17.2847 9.84867 18.218 9.998V11.048C17.8633 10.964 17.3547 10.8893 16.692 10.824C16.0387 10.7493 15.5113 10.712 15.11 10.712C13.1967 10.712 12.24 11.2627 12.24 12.364V16.648C12.24 16.9467 12.3287 17.208 12.506 17.432C12.6927 17.656 12.9447 17.8193 13.262 17.922C13.5607 18.034 13.8593 18.1133 14.158 18.16C14.4567 18.1973 14.7927 18.216 15.166 18.216C15.7913 18.216 16.4587 18.132 17.168 17.964V14.786H15.04V13.834H18.428V18.72C17.2147 19 16.0993 19.14 15.082 19.14ZM23.2862 19.14C22.6889 19.14 22.2409 19.1167 21.9422 19.07C21.6436 19.0327 21.3449 18.944 21.0462 18.804C20.7382 18.664 20.5142 18.44 20.3742 18.132C20.2342 17.8147 20.1642 17.39 20.1642 16.858V14.506C20.1642 14.086 20.2156 13.7173 20.3182 13.4C20.4209 13.0827 20.5562 12.8353 20.7242 12.658C20.8642 12.4993 21.0742 12.378 21.3542 12.294C21.6436 12.2007 21.9376 12.14 22.2362 12.112C22.5722 12.0933 22.9222 12.084 23.2862 12.084C23.7716 12.084 24.1356 12.098 24.3782 12.126C24.6302 12.1447 24.8962 12.1913 25.1762 12.266C25.4656 12.35 25.6896 12.476 25.8482 12.644C26.0069 12.812 26.1422 13.0547 26.2542 13.372C26.3569 13.6987 26.4082 14.0767 26.4082 14.506V16.858C26.4082 17.6513 26.2262 18.23 25.8622 18.594C25.7129 18.7433 25.4982 18.86 25.2182 18.944C24.9382 19.028 24.6489 19.084 24.3502 19.112C23.9956 19.1307 23.6409 19.14 23.2862 19.14ZM23.2862 18.314C23.6782 18.314 23.9629 18.3047 24.1402 18.286C24.3176 18.2673 24.4902 18.216 24.6582 18.132C24.8262 18.0573 24.9429 17.936 25.0082 17.768C25.0829 17.5907 25.1202 17.348 25.1202 17.04V14.296C25.1202 13.876 25.0689 13.5727 24.9662 13.386C24.8636 13.19 24.6862 13.064 24.4342 13.008C24.1916 12.9427 23.8089 12.91 23.2862 12.91C22.7636 12.91 22.3762 12.9427 22.1242 13.008C21.8816 13.064 21.7089 13.19 21.6062 13.386C21.5036 13.5727 21.4522 13.876 21.4522 14.296V17.04C21.4522 17.348 21.4849 17.5907 21.5502 17.768C21.6249 17.936 21.7462 18.0573 21.9142 18.132C22.0822 18.216 22.2549 18.2673 22.4322 18.286C22.6096 18.3047 22.8942 18.314 23.2862 18.314ZM34.4418 19.14C33.8631 19.14 33.4105 19.0793 33.0838 18.958C32.7571 18.8273 32.5191 18.6127 32.3698 18.314C32.2298 18.006 32.1598 17.5767 32.1598 17.026V13.05H30.6478V12.224H32.1598V10.124H33.4338V12.224H35.8558V13.05H33.4338V17.096C33.4338 17.432 33.4711 17.684 33.5458 17.852C33.6298 18.02 33.7698 18.1413 33.9658 18.216C34.1711 18.2813 34.4651 18.314 34.8478 18.314C34.9691 18.314 35.3051 18.2767 35.8558 18.202V19.028C35.3798 19.1027 34.9085 19.14 34.4418 19.14ZM40.1026 19.14C39.5053 19.14 39.0573 19.1167 38.7586 19.07C38.46 19.0327 38.1613 18.944 37.8626 18.804C37.5546 18.664 37.3306 18.44 37.1906 18.132C37.0506 17.8147 36.9806 17.39 36.9806 16.858V14.506C36.9806 14.086 37.032 13.7173 37.1346 13.4C37.2373 13.0827 37.3726 12.8353 37.5406 12.658C37.6806 12.4993 37.8906 12.378 38.1706 12.294C38.46 12.2007 38.754 12.14 39.0526 12.112C39.3886 12.0933 39.7386 12.084 40.1026 12.084C40.588 12.084 40.952 12.098 41.1946 12.126C41.4466 12.1447 41.7126 12.1913 41.9926 12.266C42.282 12.35 42.506 12.476 42.6646 12.644C42.8233 12.812 42.9586 13.0547 43.0706 13.372C43.1733 13.6987 43.2246 14.0767 43.2246 14.506V16.858C43.2246 17.6513 43.0426 18.23 42.6786 18.594C42.5293 18.7433 42.3146 18.86 42.0346 18.944C41.7546 19.028 41.4653 19.084 41.1666 19.112C40.812 19.1307 40.4573 19.14 40.1026 19.14ZM40.1026 18.314C40.4946 18.314 40.7793 18.3047 40.9566 18.286C41.134 18.2673 41.3066 18.216 41.4746 18.132C41.6426 18.0573 41.7593 17.936 41.8246 17.768C41.8993 17.5907 41.9366 17.348 41.9366 17.04V14.296C41.9366 13.876 41.8853 13.5727 41.7826 13.386C41.68 13.19 41.5026 13.064 41.2506 13.008C41.008 12.9427 40.6253 12.91 40.1026 12.91C39.58 12.91 39.1926 12.9427 38.9406 13.008C38.698 13.064 38.5253 13.19 38.4226 13.386C38.32 13.5727 38.2686 13.876 38.2686 14.296V17.04C38.2686 17.348 38.3013 17.5907 38.3666 17.768C38.4413 17.936 38.5626 18.0573 38.7306 18.132C38.8986 18.216 39.0713 18.2673 39.2486 18.286C39.426 18.3047 39.7106 18.314 40.1026 18.314ZM51.2582 19.14C50.6796 19.14 50.2269 19.0793 49.9002 18.958C49.5736 18.8273 49.3356 18.6127 49.1862 18.314C49.0462 18.006 48.9762 17.5767 48.9762 17.026V13.05H47.4642V12.224H48.9762V10.124H50.2502V12.224H52.6722V13.05H50.2502V17.096C50.2502 17.432 50.2876 17.684 50.3622 17.852C50.4462 18.02 50.5862 18.1413 50.7822 18.216C50.9876 18.2813 51.2816 18.314 51.6642 18.314C51.7856 18.314 52.1216 18.2767 52.6722 18.202V19.028C52.1962 19.1027 51.7249 19.14 51.2582 19.14ZM56.919 19.14C56.3217 19.14 55.8737 19.1167 55.575 19.07C55.2764 19.0327 54.9777 18.944 54.679 18.804C54.371 18.664 54.147 18.44 54.007 18.132C53.867 17.8147 53.797 17.39 53.797 16.858V14.506C53.797 14.086 53.8484 13.7173 53.951 13.4C54.0537 13.0827 54.189 12.8353 54.357 12.658C54.497 12.4993 54.707 12.378 54.987 12.294C55.2764 12.2007 55.5704 12.14 55.869 12.112C56.205 12.0933 56.555 12.084 56.919 12.084C57.4044 12.084 57.7684 12.098 58.011 12.126C58.263 12.1447 58.529 12.1913 58.809 12.266C59.0984 12.35 59.3224 12.476 59.481 12.644C59.6397 12.812 59.775 13.0547 59.887 13.372C59.9897 13.6987 60.041 14.0767 60.041 14.506V16.858C60.041 17.6513 59.859 18.23 59.495 18.594C59.3457 18.7433 59.131 18.86 58.851 18.944C58.571 19.028 58.2817 19.084 57.983 19.112C57.6284 19.1307 57.2737 19.14 56.919 19.14ZM56.919 18.314C57.311 18.314 57.5957 18.3047 57.773 18.286C57.9504 18.2673 58.123 18.216 58.291 18.132C58.459 18.0573 58.5757 17.936 58.641 17.768C58.7157 17.5907 58.753 17.348 58.753 17.04V14.296C58.753 13.876 58.7017 13.5727 58.599 13.386C58.4964 13.19 58.319 13.064 58.067 13.008C57.8244 12.9427 57.4417 12.91 56.919 12.91C56.3964 12.91 56.009 12.9427 55.757 13.008C55.5144 13.064 55.3417 13.19 55.239 13.386C55.1364 13.5727 55.085 13.876 55.085 14.296V17.04C55.085 17.348 55.1177 17.5907 55.183 17.768C55.2577 17.936 55.379 18.0573 55.547 18.132C55.715 18.216 55.8877 18.2673 56.065 18.286C56.2424 18.3047 56.527 18.314 56.919 18.314ZM62.0061 12.224H63.2521V12.952H63.2661C63.3687 12.3733 64.1387 12.084 65.5761 12.084C66.4347 12.084 67.0834 12.266 67.5221 12.63C67.9607 12.9847 68.1801 13.442 68.1801 14.002V16.788C68.1801 17.1893 68.1194 17.5393 67.9981 17.838C67.8861 18.1367 67.7367 18.37 67.5501 18.538C67.3821 18.6967 67.1487 18.8227 66.8501 18.916C66.5607 19.0093 66.2714 19.07 65.9821 19.098C65.7207 19.126 65.4034 19.14 65.0301 19.14C64.6194 19.14 64.2414 19.0933 63.8961 19C63.5601 18.8973 63.3501 18.7527 63.2661 18.566V21.912H62.0061V12.224ZM65.0581 18.286C65.5434 18.286 65.9121 18.2533 66.1641 18.188C66.4254 18.1133 66.6121 17.9827 66.7241 17.796C66.8361 17.6093 66.8921 17.3247 66.8921 16.942V14.45C66.8921 14.03 66.8361 13.7173 66.7241 13.512C66.6121 13.3067 66.4254 13.1713 66.1641 13.106C65.9121 13.0313 65.5387 12.994 65.0441 12.994C64.5494 12.994 64.1807 13.0313 63.9381 13.106C63.6954 13.1713 63.5227 13.3067 63.4201 13.512C63.3174 13.708 63.2661 14.0207 63.2661 14.45V16.942C63.2661 17.3247 63.3174 17.6093 63.4201 17.796C63.5321 17.9827 63.7141 18.1133 63.9661 18.188C64.2181 18.2533 64.5821 18.286 65.0581 18.286Z" fill="#41A2DB"/>
+      <path d="M79 17L84 12L89 17" stroke="#41A2DB" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>    
+    </span>
+
+    <div id="ref">
+      <span id="updatedTime">Last updated</span>
+      <div id="refre">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.25 9C2.25 12.7279 5.27208 15.75 9 15.75C12.7279 15.75 15.75 12.7279 15.75 9C15.75 5.27208 12.7279 2.25 9 2.25C6.50155 2.25 4.32014 3.60742 3.15303 5.625M3.15303 5.625V2.25M3.15303 5.625H6.46875" stroke="#41A2DB" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>      
+      </div>
+    </div>
+  `;
+
+  if (!document.getElementById("myBox")) {
+    refresher?.appendChild(myBox);
+
+    document.getElementById("customGoToTop")?.addEventListener("click", () => {
+      document
+        .getElementsByClassName("css-1qoar0o")
+        [document.getElementsByClassName("css-1qoar0o").length - 2].click();
+    });
+
+    document.getElementById("refre")?.addEventListener("click", () => {
+      document.getElementsByClassName("css-10ebv51")[0].click();
+    });
+
+    const elementToObserve = document.getElementsByClassName("css-f4cjug")[0];
+
+    if (refresher && elementToObserve) {
+      const observer = new MutationObserver((mutationsList) => {
+        if (
+          mutationsList[0].target.data &&
+          document.getElementById("updatedTime")
+        ) {
+          document.getElementById("updatedTime").innerText =
+            mutationsList[0]?.target?.data;
+        }
+      });
+
+      observer.observe(elementToObserve, {
+        subtree: true,
+        childList: true,
+        characterData: true,
+      });
+    }
+  }
+}

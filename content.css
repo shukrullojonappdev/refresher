@@ -4,35 +4,34 @@
 .swiper:before {
   content: "";
   position: relative;
-  width: 34px;
-  height: 14px;
+  width: 38px;
+  height: 18px;
   display: block;
-  background-color: #e7ebed;
+  background-color: #ebebeb;
   border-radius: 10px;
 }
 .swiper:after {
   content: "";
   position: absolute;
   top: 0;
-  left: -2px;
-  transform: translate(0, -3px);
-  height: 20px;
-  width: 20px;
+  left: 1px;
+  transform: translate(0, 1px);
+  height: 16px;
+  width: 16px;
   display: block;
   border-radius: 50%;
-  background-color: #cfd8dc;
+  background-color: #fff;
   transition: 0.2s all;
 }
 .swiper:focus {
   outline: none;
 }
 .swiper:checked:before {
-  background-color: rgb(43, 154, 190);
+  background-color: #34c759;
 }
 .swiper:checked:after {
   left: 100%;
-  transform: translate(calc(2px - 100%), -2px);
-  background-color: rgb(7, 115, 152);
+  transform: translate(calc(-1px - 100%), 1px);
 }
 
 .swiper {
@@ -101,4 +100,80 @@
   #boxForfilters {
     grid-template-columns: 130px 1fr;
   }
+}
+
+#customClearFilter {
+  cursor: pointer;
+}
+
+#customGoToTop {
+  cursor: pointer;
+}
+
+#relayAutoRefresher {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+#myBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+#switches {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#switches2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#spanTagParent img {
+  width: 50px;
+  height: 50px;
+}
+
+#ref {
+  border: 1px solid #c9dde9;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+#ref span {
+  margin: 5px 8px;
+}
+
+#refre {
+  background: #e9f7ff;
+  height: 100%;
+  width: 38px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.css-hkinvy {
+  overflow: hidden;
+}
+
+#rfrrtsldr {
+  accent-color: #41a2db;
+}
+
+.form-check {
+  display: flex !important;
+  flex-direction: row-reverse !important;
+  justify-content: space-between !important;
+  padding-right: 30px;
+  width: 200px;
 }

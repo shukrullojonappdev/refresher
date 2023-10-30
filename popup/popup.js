@@ -30,6 +30,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       chrome.storage.local.clear(() => {
         companyInfo.hidden = true;
         loginForm.hidden = false;
+        chrome.runtime.sendMessage({ exit: true });
       });
     });
 
