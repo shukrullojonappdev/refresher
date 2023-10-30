@@ -342,14 +342,14 @@ function run3(w) {
     f.innerHTML =
       '<div class="form-check"><input type="checkbox" class="swiper" ' +
       g +
-      ' id="highlightedOnTopBox" title="Show at the top"><div style="display: inline-flex;">Show at the top</div></div> <div class="form-check" ><input type="checkbox" id="easyBook" class="swiper" title="Easy book"><div style="display: inline-flex; ">Easy book</div></div>';
+      ' id="highlightedOnTopBox" title="Highlight at the top"><div style="display: inline-flex;">Highlight at the top</div></div> <div class="form-check" ><input type="checkbox" id="easyBook" class="swiper" title="Click to book"><div style="display: inline-flex; ">Click to book</div></div>';
     g = document.createElement("span");
     g.id = "switches2";
     g.style = "max-width: 200px;";
     g.innerHTML =
       '<div class="form-check" ><input type="checkbox" id="autoExpand" class="swiper" ' +
       (H ? "checked " : " ") +
-      ' style="margin-right: 0.5rem;" title="Show details first load"><div style="display: inline-flex; ">Show details</div></div> <div class="form-check" ><input type="checkbox" id="autoBook" class="swiper" style="margin-right: 0.5rem;" title="Auto book"><div style="display: inline-flex; ">Auto book</div></div>';
+      ' style="margin-right: 0.5rem;" title="Auto expand first load"><div style="display: inline-flex; ">Auto expand</div></div> <div class="form-check" ><input type="checkbox" id="autoBook" class="swiper" style="margin-right: 0.5rem;" title="Auto book"><div style="display: inline-flex; ">Auto book</div></div>';
     d.appendChild(f);
     d.appendChild(g);
     document
@@ -980,14 +980,14 @@ function run2(w) {
     a.innerHTML =
       '<div class="form-check"><input type="checkbox" class="swiper" ' +
       b +
-      ' id="highlightedOnTopBox" title="Show at the top"><div style="display: inline-flex;">Show at the top</div></div> <div class="form-check"><input type="checkbox" class="swiper" id="ncb" title="Easy book"><div style="display: inline-flex;">Easy book</div></div>';
+      ' id="highlightedOnTopBox" title="Highlight at the top"><div style="display: inline-flex;">Highlight at the top</div></div> <div class="form-check"><input type="checkbox" class="swiper" id="ncb" title="Click to book"><div style="display: inline-flex;">Click to book</div></div>';
     b = document.createElement("span");
     b.id = "switches2";
     b.style = "max-width: 200px;";
     b.innerHTML =
       '<div class="form-check" ><input type="checkbox" id="autoExpand" class="swiper" ' +
       (q ? "checked " : " ") +
-      ' style="margin-right: 0.5rem;" title="Show details"><div style="display: inline-flex; ">Show details</div></div> <div class="form-check" ><input type="checkbox" id="autoBook" class="swiper" style="margin-right: 0.5rem;" title="Auto book"><div style="display: inline-flex; ">Auto book</div></div>  ';
+      ' style="margin-right: 0.5rem;" title="Auto expand"><div style="display: inline-flex; ">Auto expand</div></div> <div class="form-check" ><input type="checkbox" id="autoBook" class="swiper" style="margin-right: 0.5rem;" title="Auto book"><div style="display: inline-flex; ">Auto book</div></div>  ';
     c.appendChild(a);
     c.appendChild(b);
     document.getElementById("ncb").addEventListener("click", ma);
@@ -1617,14 +1617,14 @@ function run1() {
     b.innerHTML =
       '<div class="form-check"><input type="checkbox" class="swiper" ' +
       e +
-      ' id="highlightedOnTopBox" title="Show at the top"><div style="display: inline-flex;">Show at the top</div></div>                                                                                                                                                                                                                                                                        <div class="form-check"><input type="checkbox" class="swiper" id="ncb" style="margin-right: 0.5rem;" title="Easy book"><div style="display: inline-flex;">Easy book</div></div>';
+      ' id="highlightedOnTopBox" title="Highlight at the top"><div style="display: inline-flex;">Highlight at the top</div></div>                                                                                                                                                                                                                                                                        <div class="form-check"><input type="checkbox" class="swiper" id="ncb" style="margin-right: 0.5rem;" title="Click to book"><div style="display: inline-flex;">Click to book</div></div>';
     e = document.createElement("span");
     e.id = "switches2";
     e.style = "max-width: 200px;";
     e.innerHTML =
       '<div class="form-check" ><input type="checkbox" id="autoExpand" class="swiper" ' +
       (X ? "checked " : " ") +
-      ' style="margin-right: 0.5rem;" title="Show details"><div style="display: inline-flex; ">Show details</div></div>';
+      ' style="margin-right: 0.5rem;" title="Auto expand"><div style="display: inline-flex; ">Auto expand</div></div>';
     a.appendChild(b);
     a.appendChild(e);
     document.getElementById("ncb").addEventListener("click", ya);
