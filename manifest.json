@@ -28,7 +28,7 @@
   },
   "description": "Amazon Relay Refresher by shukrullojondev",
   "manifest_version": 3,
-  "name": "Amazon Relay Refresher",
+  "name": "Amazon Relay Mega Refresher",
   "permissions": [
     "tabs",
     "storage",
