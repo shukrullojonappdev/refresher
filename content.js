@@ -1978,7 +1978,6 @@ function mainFunction() {
 }
 
 chrome.runtime.onMessage.addListener((message) => {
-  console.log(message);
   if (
     "name" in message &&
     message?.name.toLowerCase() ===
