@@ -16,6 +16,8 @@ $jscomp.makeIterator = function (w) {
   throw Error(String(w) + " is not an iterable or ArrayLike");
 };
 
+let isLogined = false;
+
 function run3(w) {
   function F() {
     var d = document.createElement("div");
@@ -447,51 +449,56 @@ function run3(w) {
   }
 
   function T() {
-    501 > window.innerWidth
-      ? ca(!0)
-      : (ca(!1), K || document.getElementById("hideSettingsButton").click());
-    if (
-      null !== document.getElementById("utility-bar") &&
-      null === document.getElementById("onBtn")
-    ) {
-      try {
-        "Next" ===
-          document
-            .getElementById("utility-bar")
-            .getElementsByClassName("css-lz9wxf")[0]
-            .innerText.slice(0, 4) &&
-          document
-            .getElementById("utility-bar")
-            .getElementsByClassName("css-hkr77h")
-            .item(0)
-            .click();
-      } catch (d) {}
-      t("relayAutoRefresher");
-      z = 801 > window.innerWidth ? 0 : 1201 > window.innerWidth ? 1 : 2;
-      M.id = "relayAutoRefresher";
-      N = "";
-      M.style.cssText =
-        " display: grid;grid-template-columns: 90% 10%; padding:8px; font-size:14px; line-height:16px;";
-      document
-        .getElementById("utility-bar")
-        .children[0].insertBefore(
-          M,
-          document.getElementById("utility-bar").children[0].children[0]
-        );
-      x = "30px";
-      U
-        ? (la(),
-          (r = document.getElementsByClassName("css-1gp38wa").item(0)),
-          null == r &&
-            ((r = document.getElementsByClassName("css-ppc4rt").item(0)),
+    if (isLogined) {
+      501 > window.innerWidth
+        ? ca(!0)
+        : (ca(!1), K || document.getElementById("hideSettingsButton").click());
+      if (
+        null !== document.getElementById("utility-bar") &&
+        null === document.getElementById("onBtn")
+      ) {
+        try {
+          "Next" ===
+            document
+              .getElementById("utility-bar")
+              .getElementsByClassName("css-lz9wxf")[0]
+              .innerText.slice(0, 4) &&
+            document
+              .getElementById("utility-bar")
+              .getElementsByClassName("css-hkr77h")
+              .item(0)
+              .click();
+        } catch (d) {}
+        t("relayAutoRefresher");
+        z = 801 > window.innerWidth ? 0 : 1201 > window.innerWidth ? 1 : 2;
+        M.id = "relayAutoRefresher";
+        N = "";
+        M.style.cssText =
+          " display: grid;grid-template-columns: 90% 10%; padding:8px; font-size:14px; line-height:16px;";
+        document
+          .getElementById("utility-bar")
+          .children[0].insertBefore(
+            M,
+            document.getElementById("utility-bar").children[0].children[0]
+          );
+        x = "30px";
+        U
+          ? (la(),
+            (r = document.getElementsByClassName("css-1gp38wa").item(0)),
             null == r &&
-              ((r = document.getElementsByClassName("css-174gqfj").item(0)),
-              null == r && console.log("ERROR: 412"))),
-          Ba(),
-          document.getElementById("onBtn").addEventListener("click", oa))
-        : chrome.runtime.sendMessage({ type: "6ad1f6as5f1" }, function (d) {});
+              ((r = document.getElementsByClassName("css-ppc4rt").item(0)),
+              null == r &&
+                ((r = document.getElementsByClassName("css-174gqfj").item(0)),
+                null == r && console.log("ERROR: 412"))),
+            Ba(),
+            document.getElementById("onBtn").addEventListener("click", oa))
+          : chrome.runtime.sendMessage(
+              { type: "6ad1f6as5f1" },
+              function (d) {}
+            );
+      }
+      addCustomComponents();
     }
-    addCustomComponents();
   }
   function t(d) {
     null != document.getElementById(d) &&
@@ -998,49 +1005,55 @@ function run2(w) {
     I && document.getElementById("ncb").click();
   }
   function T() {
-    501 > window.innerWidth
-      ? ha(!0)
-      : (ha(!1), X || document.getElementById("hideSettingsButton").click());
-    if (
-      null !== document.getElementById("utility-bar") &&
-      null === document.getElementById("onBtn")
-    ) {
-      try {
-        "Next" ===
-          document
-            .getElementById("utility-bar")
-            .getElementsByClassName("css-lz9wxf")[0]
-            .innerText.slice(0, 4) &&
-          document
-            .getElementById("utility-bar")
-            .getElementsByClassName("css-hkr77h")
-            .item(0)
-            .click();
-      } catch (c) {}
-      t("relayAutoRefresher");
-      A = 801 > window.innerWidth ? 0 : 1201 > window.innerWidth ? 1 : 2;
-      D.id = "relayAutoRefresher";
-      r = "";
-      D.style.cssText =
-        " display: grid;grid-template-columns: 90% 10%; padding:8px; font-size:14px; line-height:16px;";
-      document
-        .getElementById("utility-bar")
-        .children[0].insertBefore(
-          D,
-          document.getElementById("utility-bar").children[0].children[0]
-        );
-      E = "30px";
-      C
-        ? (la(),
-          (h = document.getElementsByClassName("css-1gp38wa").item(0)),
-          null == h &&
-            ((h = document.getElementsByClassName("css-ppc4rt").item(0)),
+    if (isLogined) {
+      501 > window.innerWidth
+        ? ha(!0)
+        : (ha(!1), X || document.getElementById("hideSettingsButton").click());
+      if (
+        null !== document.getElementById("utility-bar") &&
+        null === document.getElementById("onBtn")
+      ) {
+        try {
+          "Next" ===
+            document
+              .getElementById("utility-bar")
+              .getElementsByClassName("css-lz9wxf")[0]
+              .innerText.slice(0, 4) &&
+            document
+              .getElementById("utility-bar")
+              .getElementsByClassName("css-hkr77h")
+              .item(0)
+              .click();
+        } catch (c) {}
+        t("relayAutoRefresher");
+        A = 801 > window.innerWidth ? 0 : 1201 > window.innerWidth ? 1 : 2;
+        D.id = "relayAutoRefresher";
+        r = "";
+        D.style.cssText =
+          " display: grid;grid-template-columns: 90% 10%; padding:8px; font-size:14px; line-height:16px;";
+        document
+          .getElementById("utility-bar")
+          .children[0].insertBefore(
+            D,
+            document.getElementById("utility-bar").children[0].children[0]
+          );
+        E = "30px";
+        C
+          ? (la(),
+            (h = document.getElementsByClassName("css-1gp38wa").item(0)),
             null == h &&
-              ((h = document.getElementsByClassName("css-174gqfj").item(0)),
-              null == h && console.log("ERROR: 412"))),
-          Ba(),
-          document.getElementById("onBtn").addEventListener("click", oa))
-        : chrome.runtime.sendMessage({ type: "6ad1f6as5f1" }, function (c) {});
+              ((h = document.getElementsByClassName("css-ppc4rt").item(0)),
+              null == h &&
+                ((h = document.getElementsByClassName("css-174gqfj").item(0)),
+                null == h && console.log("ERROR: 412"))),
+            Ba(),
+            document.getElementById("onBtn").addEventListener("click", oa))
+          : chrome.runtime.sendMessage(
+              { type: "6ad1f6as5f1" },
+              function (c) {}
+            );
+      }
+      addCustomComponents();
     }
   }
   function t(c) {
@@ -1892,17 +1905,19 @@ function run1() {
     X = !1,
     c = !0;
   setTimeout(() => {
-    C ||
-      (F(),
-      (C = !0),
-      (h = document.getElementsByClassName("css-1gp38wa").item(0)),
-      null == h &&
-        ((h = document.getElementsByClassName("css-ppc4rt").item(0)),
+    if (isLogined) {
+      C ||
+        (F(),
+        (C = !0),
+        (h = document.getElementsByClassName("css-1gp38wa").item(0)),
         null == h &&
-          ((h = document.getElementsByClassName("css-174gqfj").item(0)),
-          null == h && console.log("ERROR: 412"))),
-      Ba(),
-      document.getElementById("onBtn").addEventListener("click", la));
+          ((h = document.getElementsByClassName("css-ppc4rt").item(0)),
+          null == h &&
+            ((h = document.getElementsByClassName("css-174gqfj").item(0)),
+            null == h && console.log("ERROR: 412"))),
+        Ba(),
+        document.getElementById("onBtn").addEventListener("click", la));
+    }
   }, 500);
   document.body.addEventListener("mouseup", function () {
     1 == y
@@ -1970,11 +1985,13 @@ chrome.runtime.onMessage.addListener((message) => {
       document.getElementById("company-name").innerText.toLowerCase()
   ) {
     setTimeout(function () {
+      isLogined = true;
       mainFunction();
     }, 100);
   }
 
   if ("exit" in message && document.getElementById("relayAutoRefresher")) {
+    isLogined = false;
     document.getElementById("relayAutoRefresher").remove();
     document.getElementsByClassName("css-hkinvy")[0].style.height = "auto";
   }
